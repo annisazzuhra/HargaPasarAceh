@@ -60,3 +60,30 @@ WHERE id_pengguna = 1
 ROLLBACK TO SAVEPOINT sebelum_perubahan;
 
 COMMIT;
+
+BEGIN;
+
+WITH laporan_diperbarui AS (
+    UPDATE laporan_harga
+    SET status = 'terverifikasi'
+    WHERE id_laporan = 1
+      AND status = 'menunggu'
+    RETURNING
+        id_laporan,
+        id_pengguna,
+        id_komoditas
+)
+INSERT INTO peringatan_harga (
+    id_pengguna,
+    id_komoditas,
+    pesan
+)
+SELECT
+    id_pengguna,
+    id_komoditas,
+    'Laporan harga #' || id_laporan ||
+    ' telah diverifikasi.'
+FROM laporan_diperbarui
+WHERE id_pengguna IS NOT NULL;
+
+COMMIT;
