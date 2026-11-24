@@ -87,3 +87,31 @@ FROM laporan_diperbarui
 WHERE id_pengguna IS NOT NULL;
 
 COMMIT;
+
+SELECT
+    lk.id_langganan,
+    u.nama AS nama_pengguna,
+    k.nama_komoditas,
+    lk.tanggal_langganan
+FROM langganan_komoditas lk
+JOIN pengguna u
+    ON lk.id_pengguna = u.id_pengguna
+JOIN komoditas k
+    ON lk.id_komoditas = k.id_komoditas
+ORDER BY lk.id_langganan;
+
+SELECT
+    id_laporan,
+    harga,
+    status
+FROM laporan_harga
+ORDER BY id_laporan;
+
+SELECT
+    id_peringatan,
+    id_pengguna,
+    id_komoditas,
+    pesan,
+    status
+FROM peringatan_harga
+ORDER BY id_peringatan;
