@@ -17,3 +17,7 @@ router.get('/pasar', getPasar);
 router.get('/komoditas', getKomoditas);
 router.get('/terbaru', getHargaTerbaru);
 router.get('/rata-rata', getRataRata);
+
+// Data yang memerlukan login
+router.post('/laporan', verifikasiToken, tambahLaporan);
+router.get('/laporan-saya', verifikasiToken, getLaporanSaya);
