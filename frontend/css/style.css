@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
     margin: 0;
@@ -661,9 +662,9 @@ tbody tr:last-child td {
 }
 
 .produce-image {
-    width: 100%;
-    max-width: 380px;
-    height: 360px;
+    width: 145%;
+    max-width: 610px;
+    height: 550px;
     object-fit: contain;
     display: block;
     margin: auto;
@@ -672,9 +673,437 @@ tbody tr:last-child td {
 
 @media (max-width: 850px) {
     .produce-image {
-        max-width: 320px;
+        width: 100%;
+        max-width: 380px;
         height: auto;
     }
 }
 
+/* =================================
+   DESAIN BARU - HARGAPASAR ACEH
+================================= */
+
+/* BACKGROUND */
+body {
+    background: #e7efdc;
+    color: #263d2d;
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20px;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            rgba(110, 145, 75, 0.25),
+            rgba(110, 145, 75, 0.25)
+        ),
+        url("../images/bg-daun.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(12px);
+    transform: scale(1.03);
+}
+
+/* NAVBAR */
+.navbar {
+    margin: 25px 3% 0;
+    padding: 18px 3%;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(15px);
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 5px 25px rgba(35, 65, 35, 0.08);
+}
+
+/* HERO UTAMA */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1.25fr 0.65fr;
+    align-items: center;
+    gap: 15px;
+    margin: 0 3%;
+    padding: 40px 2.5%;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(15px);
+    border-radius: 0 0 22px 22px;
+    overflow: hidden;
+}
+
+/* TEKS HERO */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+}
+
+.hero h1 {
+    font-size: 40px;
+    line-height: 1.15;
+}
+
+/* GAMBAR BAHAN PANGAN */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.produce-image {
+    width: 120%;
+    max-width: 570px;
+    height: 480px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 15px 18px rgba(45, 75, 35, 0.12));
+}
+
+/* KARTU INFORMASI */
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(210, 225, 195, 0.7);
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 8px 25px rgba(40, 80, 40, 0.07);
+}
+
+/* BAGIAN HARGA */
+.content {
+    margin: 28px 3%;
+    padding: 35px 5%;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(35, 65, 35, 0.06);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-features {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feature-card {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        margin: 10px 3% 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 35px 6%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .produce-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .hero-features {
+        flex-direction: column;
+    }
+}
+
+/* NAVBAR MODERN */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 3%;
+    margin: 25px 3% 0;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    border-radius: 22px 22px 0 0;
+}
+
+/* LOGO */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6f0d9;
+    border-radius: 13px;
+    font-size: 23px;
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 23px;
+    color: #356847;
+}
+
+.brand h2 span {
+    color: #d8a53c;
+}
+
+/* MENU */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #3d4b40;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-menu a.active {
+    color: #356847;
+}
+
+.nav-menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4c8051;
+    border-radius: 5px;
+}
+
+/* TOMBOL KANAN */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #e9f1e1;
+    color: #315d3c;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.login-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 30px;
+    background: #356847;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .brand h2 {
+        font-size: 18px;
+    }
+
+    .nav-actions {
+        gap: 6px;
+    }
+
+    .login-btn {
+        padding: 10px 14px;
+    }
+}
+
+/* BAGIAN HARGA KOMODITAS */
+.content {
+    margin: 28px 3%;
+    padding: 35px 5%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(40, 65, 35, 0.08);
+}
+
+/* JUDUL HARGA */
+.content h2 {
+    text-align: center;
+    color: #294d35;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.content h2::before {
+    content: "🌿";
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.content .subtitle {
+    text-align: center;
+    color: #788579;
+    margin-bottom: 30px;
+}
+
+/* KARTU HARGA */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.price-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e7eee5;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(40, 65, 35, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(40, 65, 35, 0.12);
+}
+
+.price-card h3 {
+    color: #66776a;
+    font-size: 16px;
+}
+
+.price-card p {
+    color: #356847;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.price-card p span {
+    color: #89968b;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PERBANDINGAN HARGA PASAR */
+.market-section {
+    margin: 28px 3%;
+    padding: 45px 5%;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(40, 65, 35, 0.08);
+}
+
+.market-section h2 {
+    text-align: center;
+    color: #294d35;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.market-subtitle {
+    text-align: center;
+    color: #788579;
+    margin-bottom: 30px;
+}
+
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e7eee5;
+}
+
+.market-section table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.market-section th {
+    background: #eaf2e3;
+    color: #356847;
+    padding: 18px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.market-section td {
+    padding: 18px;
+    color: #536458;
+    border-bottom: 1px solid #edf1eb;
+    font-size: 14px;
+}
+
+.market-section tbody tr:hover {
+    background: #f4f8ef;
+}
+
+.market-section tbody tr:last-child td {
+    border-bottom: none;
+}
 
