@@ -21,3 +21,5 @@ router.get('/rata-rata', getRataRata);
 // Data yang memerlukan login
 router.post('/laporan', verifikasiToken, tambahLaporan);
 router.get('/laporan-saya', verifikasiToken, getLaporanSaya);
+
+module.exports = router;
