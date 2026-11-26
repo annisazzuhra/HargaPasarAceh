@@ -73,3 +73,12 @@ SELECT
 FROM laporan_harga
 GROUP BY status
 ORDER BY status;
+
+-- 14. Mengecek jumlah laporan berdasarkan komoditas dan pasar
+SELECT
+    id_komoditas,
+    id_pasar,
+    COUNT(*) AS jumlah_laporan
+FROM laporan_harga
+GROUP BY id_komoditas, id_pasar
+ORDER BY id_komoditas, id_pasar;
