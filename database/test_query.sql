@@ -65,3 +65,11 @@ SELECT * FROM log_anomali;
 
 -- 12. Mengecek data peringatan harga
 SELECT * FROM peringatan_harga;
+
+-- 13. Mengecek jumlah laporan berdasarkan status
+SELECT
+    status,
+    COUNT(*) AS jumlah_laporan
+FROM laporan_harga
+GROUP BY status
+ORDER BY status;
