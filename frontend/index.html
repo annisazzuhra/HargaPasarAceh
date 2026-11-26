@@ -7,252 +7,61 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">HargaPasar Aceh</a>
+        <div class="nav-links">
+            <a href="login.html">Masuk</a>
+            <a href="register.html" class="btn-primary">Daftar</a>
+        </div>
+    </nav>
 
-    
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="brand">
-        <div class="brand-logo">🌿</div>
-        <h2>HargaPasar <span>Aceh.</span></h2>
-    </div>
-
-    <div class="nav-menu">
-        <a href="#" class="active">Beranda</a>
-        <a href="#harga">Harga Komoditas</a>
-        <a href="#tentang">Tentang Kami</a>
-        <a href="#lapor">Kontak</a>
-    </div>
-
-    <div class="nav-actions">
-        <button class="search-btn" aria-label="Cari">⌕</button>
-        <button class="login-btn">♟ Masuk</button>
-    </div>
-</nav>
-
-
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <span class="hero-label">🌿 INFORMASI HARGA PANGAN ACEH</span>
-
-        <h1>
-            Pantau Harga Pangan,
-            <span>Lebih Mudah dan Transparan.</span>
-        </h1>
-
-        <p class="hero-desc">
-            Temukan informasi harga bahan pokok dari berbagai
-            pasar di Aceh. Bandingkan harga dan bantu masyarakat
-            mendapatkan informasi yang terpercaya.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#harga" class="btn-primary">
-                Lihat Harga Sekarang →
-            </a>
-
-            <a href="#tentang" class="btn-secondary">
-                Tentang Kami
+    <main class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Informasi Harga Pangan Aceh</span>
+            <h1>Pantau Harga Pasar dengan Lebih Mudah</h1>
+            <p>
+                Dapatkan informasi harga kebutuhan pokok dari
+                berbagai pasar di sekitar Banda Aceh. Bandingkan
+                harga dan ikut berkontribusi melalui laporan harga.
+            </p>
+            <a href="dashboard.html" class="btn-primary">
+                Lihat Harga Pasar
             </a>
         </div>
 
-        <div class="hero-benefits">
-            <span>✓ Informasi harga pasar</span>
-            <span>✓ Laporan masyarakat</span>
+        <div class="hero-card">
+            <div class="hero-icon">📊</div>
+            <h3>Harga Lebih Transparan</h3>
+            <p>
+                Bantu masyarakat mengetahui perubahan harga
+                kebutuhan pokok melalui informasi dari pengguna.
+            </p>
         </div>
-    </div>
+    </main>
 
-<div class="hero-visual">
-    <img
-        src="images/bahan-pangan.png"
-        alt="Aneka bahan pangan segar Aceh"
-        class="produce-image"
-    >
-</div>
+    <section class="features">
+        <h2>Fitur HargaPasar Aceh</h2>
 
-    <div class="hero-features">
-        <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <div>
-                <h3>Informasi Harga</h3>
-                <p>Pantau harga terbaru dari berbagai pasar.</p>
-            </div>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">⚖️</div>
-            <div>
-                <h3>Perbandingan Pasar</h3>
-                <p>Bandingkan harga antar pasar di Aceh.</p>
-            </div>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <div>
-                <h3>Laporan Masyarakat</h3>
-                <p>Berbagi informasi untuk Aceh lebih baik.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Ringkasan -->
-    <section class="content" id="harga">
-        <h2>Harga Komoditas Hari Ini</h2>
-        <p class="subtitle">Informasi harga kebutuhan pokok masyarakat</p>
-
-        <div class="card-container">
-
-            <div class="price-card">
-                <h3>Beras</h3>
-                <p>Rp 15.000 <span>/ kg</span></p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>📈 Pantau Harga</h3>
+                <p>Lihat informasi harga berbagai komoditas.</p>
             </div>
 
-            <div class="price-card">
-                <h3>Cabai Merah</h3>
-                <p>Rp 45.000 <span>/ kg</span></p>
+            <div class="feature-card">
+                <h3>📝 Lapor Harga</h3>
+                <p>Bagikan informasi harga dari pasar yang dikunjungi.</p>
             </div>
 
-            <div class="price-card">
-                <h3>Bawang Merah</h3>
-                <p>Rp 38.000 <span>/ kg</span></p>
+            <div class="feature-card">
+                <h3>⚖️ Bandingkan Harga</h3>
+                <p>Bandingkan harga komoditas antar pasar.</p>
             </div>
-
-            <div class="price-card">
-                <h3>Minyak Goreng</h3>
-                <p>Rp 18.000 <span>/ liter</span></p>
-            </div>
-
-            <div class="price-card">
-                <h3>Telur Ayam</h3>
-                <p>Rp 28.000 <span>/ kg</span></p>
-            </div>
-
-            
         </div>
     </section>
 
-<!-- Perbandingan Harga Pasar -->
-<section class="market-section">
-    <h2>Perbandingan Harga Antar Pasar</h2>
-    <p class="market-subtitle">
-        Bandingkan harga bahan pokok dari berbagai pasar di Aceh
-    </p>
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Komoditas</th>
-                    <th>Pasar Peunayong</th>
-                    <th>Pasar Lambaro</th>
-                    <th>Pasar Rukoh</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Beras</td>
-                    <td>Rp 15.000</td>
-                    <td>Rp 14.500</td>
-                    <td>Rp 15.500</td>
-                </tr>
-
-                <tr>
-                    <td>Cabai Merah</td>
-                    <td>Rp 45.000</td>
-                    <td>Rp 42.000</td>
-                    <td>Rp 46.000</td>
-                </tr>
-
-                <tr>
-                    <td>Bawang Merah</td>
-                    <td>Rp 38.000</td>
-                    <td>Rp 36.000</td>
-                    <td>Rp 39.000</td>
-                </tr>
-
-                <tr>
-                    <td>Minyak Goreng</td>
-                    <td>Rp 18.000</td>
-                    <td>Rp 17.500</td>
-                    <td>Rp 18.500</td>
-                </tr>
-
-                <tr>
-                    <td>Telur Ayam</td>
-                    <td>Rp 28.000</td>
-                    <td>Rp 27.000</td>
-                    <td>Rp 29.000</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
-<!-- FORM LAPORAN HARGA -->
-<section class="report-section" id="lapor">
-    <h2>Laporkan Harga Komoditas</h2>
-    <p class="report-subtitle">
-        Bantu masyarakat mendapatkan informasi harga pangan
-        dengan melaporkan harga dari pasar yang kamu kunjungi.
-    </p>
-
-    <div class="report-container">
-        <form id="reportForm">
-
-            <div class="form-group">
-                <label for="nama">Nama Pelapor</label>
-                <input
-                    type="text"
-                    id="nama"
-                    placeholder="Masukkan nama kamu"
-                    required
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="pasar">Pilih Pasar</label>
-                <select id="pasar" required>
-                    <option value="">-- Pilih Pasar --</option>
-                    <option value="Peunayong">Pasar Peunayong</option>
-                    <option value="Lambaro">Pasar Lambaro</option>
-                    <option value="Rukoh">Pasar Rukoh</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="komoditas">Pilih Komoditas</label>
-                <select id="komoditas" required>
-                    <option value="">-- Pilih Komoditas --</option>
-                    <option value="Beras">Beras</option>
-                    <option value="Cabai Merah">Cabai Merah</option>
-                    <option value="Bawang Merah">Bawang Merah</option>
-                    <option value="Minyak Goreng">Minyak Goreng</option>
-                    <option value="Telur Ayam">Telur Ayam</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="harga">Harga per Satuan (Rp)</label>
-                <input
-                    type="number"
-                    id="harga"
-                    placeholder="Contoh: 15000"
-                    min="1"
-                    required
-                >
-            </div>
-
-            <button type="submit" class="submit-btn">
-                Kirim Laporan
-            </button>
-
-        </form>
-    </div>
-</section>
-
-    <script src="js/script.js"></script>
+    <footer>
+        <p>© 2026 HargaPasar Aceh</p>
+    </footer>
 </body>
 </html>
