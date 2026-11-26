@@ -82,3 +82,13 @@ SELECT
 FROM laporan_harga
 GROUP BY id_komoditas, id_pasar
 ORDER BY id_komoditas, id_pasar;
+
+-- 15. Mengecek statistik harga laporan
+SELECT
+    id_komoditas,
+    MIN(harga) AS harga_terendah,
+    MAX(harga) AS harga_tertinggi,
+    AVG(harga) AS rata_rata_harga
+FROM laporan_harga
+GROUP BY id_komoditas
+ORDER BY id_komoditas;
