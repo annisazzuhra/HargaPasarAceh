@@ -27,3 +27,5 @@ const verifikasiToken = (req, res, next) => {
         });
     }
 };
+
+module.exports = verifikasiToken;
