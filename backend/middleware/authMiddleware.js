@@ -26,3 +26,4 @@ const verifikasiToken = (req, res, next) => {
             message: 'Token tidak valid atau sudah kedaluwarsa'
         });
     }
+};
