@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Masuk - HargaPasar Aceh</title>
+    <script src="js/main.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="assets/img/favicon.svg" alt="">HargaPasar <span>Aceh</span></a>
+        <div class="nav-links">
+            <a href="register.html">Daftar</a>
+        </div>
+    </nav>
+
+    <div class="auth-split">
+        <aside class="auth-art">
+            <img src="assets/img/hero-market.svg" alt="Ilustrasi lapak pasar">
+            <h2>Harga pasar, di genggamanmu.</h2>
+            <p>Masuk untuk memantau harga, membandingkan pasar, dan melaporkan harga terbaru.</p>
+        </aside>
+
+        <main class="auth-container">
+            <form class="form-card" id="loginForm">
+                <h2>Selamat Datang! 👋</h2>
+                <p>Masuk untuk menggunakan HargaPasar Aceh.</p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="nama@email.com" autocomplete="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" autocomplete="current-password" required>
+
+                <button type="submit" class="btn-primary full">Masuk</button>
+
+                <p id="authMessage" class="message"></p>
+
+                <p class="form-footer">
+                    Belum punya akun?
+                    <a href="register.html">Daftar sekarang</a>
+                </p>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

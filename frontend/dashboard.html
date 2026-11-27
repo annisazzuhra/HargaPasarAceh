@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard - HargaPasar Aceh</title>
+    <script src="js/main.js" defer></script>
+    <script src="js/harga.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo"><img src="assets/img/favicon.svg" alt="">HargaPasar <span>Aceh</span></a>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="lapor-harga.html">Lapor Harga</a>
+            <a href="grafik.html">Grafik</a>
+            <a href="perbandingan.html">Perbandingan</a>
+            <a href="peringatan.html">Peringatan</a>
+            <button onclick="logout()" class="btn-outline">Keluar</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-banner">
+            <div>
+                <h1 id="sapaan">Dashboard Harga Pasar</h1>
+                <p>Pantau informasi harga kebutuhan pokok di pasar sekitar Banda Aceh.</p>
+            </div>
+            <div class="banner-emoji" aria-hidden="true">🧺</div>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="s-ico t-green">🏪</div>
+                <div>
+                    <span>Total Pasar</span>
+                    <h2 id="totalPasar" class="skeleton">00</h2>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="s-ico t-yellow">🛒</div>
+                <div>
+                    <span>Total Komoditas</span>
+                    <h2 id="totalKomoditas" class="skeleton">00</h2>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="s-ico t-red">🏷️</div>
+                <div>
+                    <span>Data Harga Terbaru</span>
+                    <h2 id="totalHarga" class="skeleton">00</h2>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <div class="section-heading">
+                <h2>Informasi Harga Terbaru</h2>
+                <a href="grafik.html">Lihat grafik →</a>
+            </div>
+
+            <div class="toolbar">
+                <div class="field">
+                    <label for="cariHarga">Cari</label>
+                    <input type="search" id="cariHarga" placeholder="Cari komoditas atau pasar...">
+                </div>
+                <div class="field">
+                    <label for="filterDashboard">Komoditas</label>
+                    <select id="filterDashboard">
+                        <option value="">Semua Komoditas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Komoditas</th>
+                            <th>Pasar</th>
+                            <th>Harga</th>
+                            <th>Tanggal</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hargaTable">
+                        <tr>
+                            <td colspan="5">Memuat data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
