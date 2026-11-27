@@ -9,3 +9,15 @@ const verifikasiToken = (req, res, next) => {
                 message: 'Silakan login terlebih dahulu'
             });
         }
+      
+         const token = header.split(' ')[1];
+
+         const decoded = jwt.verify(
+            token,
+            process.env.JWT_SECRET
+        );
+
+        req.user = decoded;
+
+        next();
+
