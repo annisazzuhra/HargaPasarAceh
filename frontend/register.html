@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Daftar - HargaPasar Aceh</title>
+    <script src="js/main.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="assets/img/favicon.svg" alt="">HargaPasar <span>Aceh</span></a>
+        <div class="nav-links">
+            <a href="login.html">Masuk</a>
+        </div>
+    </nav>
+
+    <div class="auth-split">
+        <aside class="auth-art">
+            <img src="assets/img/hero-market.svg" alt="Ilustrasi lapak pasar">
+            <h2>Bantu warga lain belanja lebih hemat.</h2>
+            <p>Satu laporan harga darimu bisa berguna untuk banyak orang.</p>
+        </aside>
+
+        <main class="auth-container">
+            <form class="form-card" id="registerForm">
+                <h2>Buat Akun 🌱</h2>
+                <p>Daftar untuk mulai berkontribusi.</p>
+
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Nama kamu" autocomplete="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="nama@email.com" autocomplete="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Minimal 8 karakter" minlength="8" autocomplete="new-password" required>
+
+                <button type="submit" class="btn-primary full">Daftar</button>
+
+                <p id="authMessage" class="message"></p>
+
+                <p class="form-footer">
+                    Sudah punya akun?
+                    <a href="login.html">Masuk</a>
+                </p>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
