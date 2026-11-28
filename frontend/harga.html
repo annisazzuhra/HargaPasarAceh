@@ -1,124 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harga Komoditas - HargaPasar Aceh</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <title>Lapor Harga - HargaPasar Aceh</title>
+    <script src="js/main.js" defer></script>
+    <script src="js/harga.js" defer></script>
 </head>
 <body>
-
-    <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="brand">
-            <div class="brand-logo">🌿</div>
-            <h2>HargaPasar <span>Aceh.</span></h2>
-        </div>
-
-        <div class="nav-menu">
-            <a href="index.html">Beranda</a>
-            <a href="harga.html" class="active">Harga Komoditas</a>
-            <a href="index.html#tentang">Tentang Kami</a>
-            <a href="index.html#lapor">Kontak</a>
-        </div>
-
-        <div class="nav-actions">
-            <button class="search-btn" aria-label="Cari">⌕</button>
-            <button class="login-btn">♟ Masuk</button>
+        <a href="dashboard.html" class="logo"><img src="assets/img/favicon.svg" alt="">HargaPasar <span>Aceh</span></a>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="lapor-harga.html">Lapor Harga</a>
+            <a href="grafik.html">Grafik</a>
+            <a href="perbandingan.html">Perbandingan</a>
+            <a href="peringatan.html">Peringatan</a>
+            <button onclick="logout()" class="btn-outline">Keluar</button>
         </div>
     </nav>
 
-    <!-- DAFTAR HARGA KOMODITAS -->
-    <section class="content" id="harga">
-        <h2>Harga Komoditas Hari Ini</h2>
-        <p class="subtitle">
-            Informasi harga kebutuhan pokok masyarakat Aceh
-        </p>
+    <main class="page-center">
+        <form class="form-card" id="laporanForm">
+            <h2>Laporkan Harga 📝</h2>
+            <p>Bagikan harga yang kamu temui di pasar. Terima kasih sudah membantu!</p>
 
-        <div class="card-container">
+            <label for="id_pasar">Pilih Pasar</label>
+            <select id="id_pasar" required>
+                <option value="">Memuat pasar...</option>
+            </select>
 
-            <div class="price-card">
-                <h3>Beras</h3>
-                <p>Rp 15.000 <span>/ kg</span></p>
+            <label for="id_komoditas">Pilih Komoditas</label>
+            <select id="id_komoditas" required>
+                <option value="">Memuat komoditas...</option>
+            </select>
+
+            <label for="harga">Harga</label>
+            <div class="input-prefix">
+                <span>Rp</span>
+                <input type="number" id="harga" min="1" placeholder="Contoh: 15000" required>
             </div>
 
-            <div class="price-card">
-                <h3>Cabai Merah</h3>
-                <p>Rp 45.000 <span>/ kg</span></p>
-            </div>
+            <button type="submit" class="btn-primary full">Kirim Laporan</button>
 
-            <div class="price-card">
-                <h3>Bawang Merah</h3>
-                <p>Rp 38.000 <span>/ kg</span></p>
-            </div>
-
-            <div class="price-card">
-                <h3>Minyak Goreng</h3>
-                <p>Rp 18.000 <span>/ liter</span></p>
-            </div>
-
-            <div class="price-card">
-                <h3>Telur Ayam</h3>
-                <p>Rp 28.000 <span>/ kg</span></p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PERBANDINGAN HARGA ANTAR PASAR -->
-    <section class="market-section">
-        <h2>Perbandingan Harga Antar Pasar</h2>
-        <p class="market-subtitle">
-            Bandingkan harga bahan pokok dari berbagai pasar di Aceh
-        </p>
-
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Komoditas</th>
-                        <th>Pasar Peunayong</th>
-                        <th>Pasar Lambaro</th>
-                        <th>Pasar Rukoh</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Beras</td>
-                        <td>Rp 15.000</td>
-                        <td>Rp 14.500</td>
-                        <td>Rp 15.500</td>
-                    </tr>
-                    <tr>
-                        <td>Cabai Merah</td>
-                        <td>Rp 45.000</td>
-                        <td>Rp 42.000</td>
-                        <td>Rp 46.000</td>
-                    </tr>
-                    <tr>
-                        <td>Bawang Merah</td>
-                        <td>Rp 38.000</td>
-                        <td>Rp 36.000</td>
-                        <td>Rp 39.000</td>
-                    </tr>
-                    <tr>
-                        <td>Minyak Goreng</td>
-                        <td>Rp 18.000</td>
-                        <td>Rp 17.500</td>
-                        <td>Rp 18.500</td>
-                    </tr>
-                    <tr>
-                        <td>Telur Ayam</td>
-                        <td>Rp 28.000</td>
-                        <td>Rp 27.000</td>
-                        <td>Rp 29.000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
+            <p id="laporanMessage" class="message"></p>
+        </form>
+    </main>
 </body>
 </html>
