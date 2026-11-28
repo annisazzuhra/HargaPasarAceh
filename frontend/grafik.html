@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Grafik Harga - HargaPasar Aceh</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/grafik.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo"><img src="assets/img/favicon.svg" alt="">HargaPasar <span>Aceh</span></a>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="lapor-harga.html">Lapor Harga</a>
+            <a href="grafik.html">Grafik</a>
+            <a href="perbandingan.html">Perbandingan</a>
+            <a href="peringatan.html">Peringatan</a>
+            <button onclick="logout()" class="btn-outline">Keluar</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-banner">
+            <div>
+                <h1>Grafik Harga Komoditas</h1>
+                <p>Lihat perbandingan harga terbaru berdasarkan pasar.</p>
+            </div>
+            <div class="banner-emoji" aria-hidden="true">📊</div>
+        </header>
+
+        <section class="content-card">
+            <label for="filterKomoditas" style="margin-top:0">Pilih Komoditas</label>
+            <select id="filterKomoditas">
+                <option value="">Semua Komoditas</option>
+            </select>
+
+            <div class="chart-container">
+                <canvas id="hargaChart"></canvas>
+            </div>
+
+            <p id="grafikMessage" class="message"></p>
+        </section>
+    </main>
+</body>
+</html>
